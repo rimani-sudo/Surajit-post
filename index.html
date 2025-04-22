@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Surajit's Facebook Style Post</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f0f2f5;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .fb-post {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 500px;
+      border: 1px solid #ccc;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .fb-post:hover {
+      transform: scale(1.02);
+    }
+
+    .fb-header {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .fb-header img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+
+    .user-info strong {
+      font-size: 16px;
+    }
+
+    .user-info span {
+      font-size: 12px;
+      color: gray;
+    }
+
+    .fb-content {
+      padding: 15px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .fb-image {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .fb-image:hover {
+      transform: scale(1.05);
+    }
+
+    .fb-footer {
+      padding: 10px 15px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      color: gray;
+      border-top: 1px solid #eee;
+    }
+
+    .like-btn {
+      background: #1877f2;
+      color: white;
+      padding: 8px 16px;
+      margin: 10px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .like-btn:hover {
+      background: #0e5cd8;
+    }
+
+    @media (max-width: 600px) {
+      .fb-post {
+        margin: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="fb-post">
+    <div class="fb-header">
+      <img src="file-A4BY3SjSgyHT7Pw44nvW15" alt="Surajit">
+      <div class="user-info">
+        <strong>Surajit</strong>
+        <span>২১ এপ্রিল ২০২৫ · পাবলিক</span>
+      </div>
+    </div>
+    <div class="fb-content">
+      "জীবনে সাফল্য পেতে হলে নিজের উপর বিশ্বাস রাখো।  
+      পরিশ্রম কখনো ব্যর্থ হয় না। প্রতিদিন শিখো, চেষ্টা করো, এগিয়ে চলো।  
+      নতুনত্বের খোঁজে থাকো সবসময়।"
+      
+    </div>
+    <img src="https://source.unsplash.com/featured/?motivation,success" class="fb-image" alt="Post Image">
+
+    <div style="text-align:center;">
+      <button class="like-btn" onclick="likePost()">Like</button>
+    </div>
+
+    <div class="fb-footer">
+      <span id="likeCount">150 Likes</span>
+      <span>20 Comments</span>
+      <span>10 Shares</span>
+    </div>
+  </div>
+
+  <script>
+    let likes = 150;
+    function likePost() {
+      likes++;
+      document.getElementById("likeCount").innerText = likes + " Likes";
+    }
+  </script>
+
+</body>
+</html>
